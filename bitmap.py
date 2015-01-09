@@ -11,37 +11,37 @@ class BitMapAbs(object):
         pass
 
     def turnOn(self, bit_loc):
-        raise NotImplemented('turnOn')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'turnOn'))
 
     def turnOff(self, bit_loc):
-        raise NotImplemented('turnOff')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'turnOff'))
 
     def isTurnedOn(self, bit_loc):
-        raise NotImplemented('isTurnedOn')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'isTurnedOn'))
 
     def clearAll(self):
-        raise NotImplemented('clearAll')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'clearAll'))
 
     def erase(self):
-        raise NotImplemented('erase')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'erase'))
 
     def bitLength(self):
-        raise NotImplemented('bitLength')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'bitLength'))
 
     def info(self):
-        raise NotImplemented('info')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'info'))
 
     def negate(self):
-        raise NotImplemented('negate')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'negate'))
 
     def union(self, bit_map):
-        raise NotImplemented('union')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'union'))
 
     def intersect(self, bit_map):
-        raise NotImplemented('intersect')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'intersect'))
 
     def reset(self, bit_map):
-        raise NotImplemented('reset')
+        raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'reset'))
 
 
 class BitMap(BitMapAbs):

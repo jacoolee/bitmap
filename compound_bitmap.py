@@ -117,9 +117,6 @@ class CompoundBitMap(BitMapAbs):
         # finally
         return True
 
-    def clearAll(self):
-        raise NotImplemented('clearAll')
-
     def _probe_mem(self, maxN=10, maxM=100, mtype='KB', N_oriented=True):
         X = (maxN, 'N') if N_oriented else (maxM, 'M')
         Y = (maxM, 'M') if N_oriented else (maxN, 'N')
