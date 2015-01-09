@@ -67,7 +67,7 @@ class BitMap(BitMapAbs):
         1L << 56, 1L << 57, 1L << 58, 1L << 59, 1L << 60, 1L << 61, 1L << 62, 1L << 63,
     ]
 
-    def __init__(self, bit_length=10000, max_increment_size=10000):
+    def __init__(self, bit_length=10000, max_increment_size=10000000):
         self._initializer = [BitMap.BASE_ITEM_VALUE]*((bit_length >> BitMap.OS_BIT_SHIFT) + 1)
         self._base = array.array(BitMap.BASE_ITEM_TYPE, self._initializer)
         self._base_bit_size = self._get_base_bit_size()

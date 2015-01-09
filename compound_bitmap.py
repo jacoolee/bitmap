@@ -151,10 +151,6 @@ class CompoundBitMap(BitMapAbs):
         return math.pow(2, math.log(( math.pow(10, N*2) ), 2) - mtype_bin_exponents[mtype]) * M/N
 
     def info(self):
-        bit_length = 0
-        for i in self._bitmaps:
-            bit_length += i.bitLength()
-
         return dict(
             base_item_type         = BitMap.BASE_ITEM_TYPE,
             base_item_byte_size    = BitMap.BASE_ITEM_BYTE_SIZE,
