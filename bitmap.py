@@ -10,13 +10,19 @@ class BitMapAbs(object):
     def __init__(self, *args, **kwargs):
         pass
 
-    def turnOn(self, bit_loc):
+    def __getitem__(self, key):
+        return self.isTurnedOn(key)
+
+    def __setitem__(self, key, bool_value):
+        return self.turnOn(key) if bool_value else self.turnOff(key)
+
+    def turnOn(self, key):
         raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'turnOn'))
 
-    def turnOff(self, bit_loc):
+    def turnOff(self, key):
         raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'turnOff'))
 
-    def isTurnedOn(self, bit_loc):
+    def isTurnedOn(self, key):
         raise NotImplementedError("%s, function: '%s'" % (self.__class__, 'isTurnedOn'))
 
     def clearAll(self):
