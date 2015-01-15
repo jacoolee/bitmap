@@ -51,7 +51,7 @@ class BitMapAbs(object):
 
 
 class BitMap(BitMapAbs):
-    BASE_ITEM_TYPE = 'l'        # signed long, for negate-compatible
+    BASE_ITEM_TYPE = 'L'        # signed long, for negate-compatible
     BASE_ITEM_VALUE = 0L
 
     BASE_ITEM_BYTE_SIZE = array.array(BASE_ITEM_TYPE).itemsize # in byte
@@ -146,6 +146,8 @@ class BitMap(BitMapAbs):
         )
 
     def negate(self):
+        if self.BASE_ITEM_TYPE not in ('B', 'H', 'I', 'L'):
+            raise TypeError, "negate not supported for item_type:'%s'" % self.BASE_ITEM_TYPE
         base_len = self._base.buffer_info()[1]
         i = 0
         while i < base_len:
