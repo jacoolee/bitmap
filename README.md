@@ -32,6 +32,8 @@ when a given number is PRETTY LARGE.
 Compound Bitmap is introduced to address the above problem, and more complex
 situations described below.
 
+Just like bloom filter, compound bitmap has 'False-Positive' issue by default, and false-negtive if 'turnOff' been used.
+
 #### For simple 'digit_string':
 ```Python
 >>> from Compound_Bitmap import CompoundBitmap
